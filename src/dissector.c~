@@ -59,7 +59,7 @@ pkt->filter = &filter;
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
-if(1) {
+if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
 	tprintf("%s\n\n",*buffer_pkt);
 	xfree(*buffer_pkt);
 
