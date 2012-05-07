@@ -10,10 +10,10 @@
 struct ipv4_filter {
   uint8_t ipv4;
   uint8_t proto;
-} __packed;
+};
 
 struct filter_all {
   struct ipv4_filter ip4;
-} _packed;
+};
 
 #endif /* PROTO_FILTER_H */

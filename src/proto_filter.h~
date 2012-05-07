@@ -9,6 +9,7 @@
 
 struct ipv4_filter {
   uint8_t ipv4;
+  uint8_t proto;
 } __packed;
 
 struct filter_all {
