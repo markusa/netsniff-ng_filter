@@ -68,7 +68,8 @@ static inline void ipv4(struct pkt_buff *pkt)
 	if (!ip)
 		return;
 
-(*pkt->filter).ip4.ipv4 = 0;
+(*pkt->filter).ip4.ipv4 = 1;
+(*pkt->filter).ip4.proto = ip->h_protocol;
 
 	frag_off = ntohs(ip->h_frag_off);
 	csum = calc_csum(ip, ip->h_ihl * 4, 0);

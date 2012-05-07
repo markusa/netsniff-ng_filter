@@ -239,6 +239,8 @@ static inline uint64_t ntohll(uint64_t x)
 # error __BYTE_ORDER is neither __LITTLE_ENDIAN nor __BIG_ENDIAN
 #endif
 
+
+/* TODO Optimize */
 #ifndef alloc_string
 # define alloc_string(buffer_pkt, ...)					\
 	{								\

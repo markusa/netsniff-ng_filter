@@ -192,7 +192,7 @@ Please report bugs to <bugs@netsniff-ng.org>
 
 =cut
 
-*/s
+*/
 
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -234,6 +234,7 @@ struct mode {
 	char *device_in;
 	char *device_out;
 	char *filter;
+	char *hlv;
 	int cpu;
 	int dump;
 	int link_type;
@@ -256,10 +257,8 @@ struct tx_stats {
 
 volatile sig_atomic_t sigint = 0;
 
-// const char *buffer_pkt2 ="s";
+
 char *buffer_pkt;
-// char char_null[] = "";
-// buffer_pkt = &char_null;
 
 static int tx_sock;
 static unsigned long frame_cnt_max = 0;
@@ -998,6 +997,7 @@ static void help(void)
 	printf("  -n|--num <uint>             Number of packets until exit\n");
 	printf("  `--     0                   Loop until interrupted (default)\n");
 	printf("   `-     n                   Send n packets and done\n");
+	printf("  --hlf		              High-Level-Filter\n");
 	printf("Options for printing:\n");
 	printf("  -s|--silent                 Do not print captured packets\n");
 	printf("  -q|--less                   Print less-verbose packet information\n");

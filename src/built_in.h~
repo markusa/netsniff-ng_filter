@@ -239,6 +239,8 @@ static inline uint64_t ntohll(uint64_t x)
 # error __BYTE_ORDER is neither __LITTLE_ENDIAN nor __BIG_ENDIAN
 #endif
 
+
+/* ToDo Optimize */
 #ifndef alloc_string
 # define alloc_string(buffer_pkt, ...)					\
 	{								\
@@ -250,7 +252,7 @@ static inline uint64_t ntohll(uint64_t x)
 		if (!(buffer_pkt = realloc(buffer_pkt,			\
 					    len_new_ + len_old_ + 1)))	\
 		      panic("Alloc String No Memory");			\
-		snprintf(buffer_pkt + len_old_, len_new_ + 1,	\
+		snprintf(buffer_pkt + len_old_, len_new_ + 1,		\
 					    __VA_ARGS__);		\
 	}
 #endif

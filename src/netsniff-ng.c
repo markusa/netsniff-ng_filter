@@ -234,6 +234,7 @@ struct mode {
 	char *device_in;
 	char *device_out;
 	char *filter;
+	char *hlv;
 	int cpu;
 	int dump;
 	int link_type;
@@ -256,10 +257,8 @@ struct tx_stats {
 
 volatile sig_atomic_t sigint = 0;
 
-// const char *buffer_pkt2 ="s";
+
 char *buffer_pkt;
-// char char_null[] = "";
-// buffer_pkt = &char_null;
 
 static int tx_sock;
 static unsigned long frame_cnt_max = 0;
@@ -668,9 +667,7 @@ static void enter_mode_read_pcap(struct mode *mode)
 
 		stats.tx_bytes += fm.tp_h.tp_len;
 		stats.tx_packets++;
-// 	tprintf("%p\n",&buffer_pkt);
-// 	tprintf("%p\n",buffer_pkt);
-// 	tprintf("werwerw\n\n");
+
 		show_frame_hdr(&fm, mode->print_mode, RING_MODE_EGRESS,
 							    &buffer_pkt);
 		dissector_entry_point(out, fm.tp_h.tp_snaplen,

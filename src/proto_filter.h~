@@ -12,7 +12,7 @@ struct ipv4_filter {
 } __packed;
 
 struct filter_all {
-  struct ipv4_filter *ip4;
+  struct ipv4_filter ip4;
 } _packed;
 
 #endif /* PROTO_FILTER_H */
