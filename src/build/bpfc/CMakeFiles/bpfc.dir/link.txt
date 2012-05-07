@@ -1,0 +1,1 @@
+/usr/bin/gcc     CMakeFiles/bpfc.dir/__/xmalloc.c.o CMakeFiles/bpfc.dir/__/xstring.c.o CMakeFiles/bpfc.dir/__/bpf.c.o CMakeFiles/bpfc.dir/lex.yy.c.o CMakeFiles/bpfc.dir/bpf_parser.tab.c.o CMakeFiles/bpfc.dir/__/bpfc.c.o  -o bpfc -rdynamic 
