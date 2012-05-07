@@ -16,6 +16,7 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../dissector_eth.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../hash.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../mtrand.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../pkt_buff.h
+netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../proto_filter.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../proto_none.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../proto_struct.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../ring.h
@@ -33,6 +34,7 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../hash.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../mtrand.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../pkt_buff.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../proto_ethernet.h
+netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../proto_filter.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../proto_ipv4.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../proto_none.h
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../proto_struct.h

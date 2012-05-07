@@ -18,6 +18,7 @@
 #include "dissector.h"
 #include "dissector_eth.h"
 
+
 int dissector_set_print_type(void *ptr, int type)
 {
 	struct protocol *proto;
@@ -48,6 +49,8 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 {
 	struct protocol *proto;
 pkt->buffer_pkt = buffer_pkt;
+struct filter_all filter;
+pkt->filter = &filter;
 	for (pkt->proto = start; pkt->proto; ) {
 		if (unlikely(!pkt->proto->process))
 			break;
@@ -56,12 +59,14 @@ pkt->buffer_pkt = buffer_pkt;
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
-
+if((*pkt->filter).ip4.ipv4) {
 	tprintf("%s\n\n",*buffer_pkt);
 	xfree(*buffer_pkt);
 
+
 	if (end && likely(end->process))
 		end->process(pkt);
+}
 }
 
 void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,

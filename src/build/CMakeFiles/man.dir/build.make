@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/markus/Desktop/netsniff-ng_search/src
+CMAKE_SOURCE_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/markus/Desktop/netsniff-ng_search/src/build
+CMAKE_BINARY_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build
 
 # Utility rule file for man.
 
@@ -54,6 +54,6 @@ CMakeFiles/man.dir/clean:
 .PHONY : CMakeFiles/man.dir/clean
 
 CMakeFiles/man.dir/depend:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles/man.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles/man.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/man.dir/depend
 

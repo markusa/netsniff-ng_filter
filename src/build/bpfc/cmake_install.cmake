@@ -1,4 +1,4 @@
-# Install script for directory: /home/markus/Desktop/netsniff-ng_search/src/bpfc
+# Install script for directory: /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpfc
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man8" TYPE FILE FILES "/home/markus/Desktop/netsniff-ng_search/src/build/bpfc/bpfc.8.gz")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man8" TYPE FILE FILES "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/bpfc.8.gz")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -42,7 +42,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}/usr/sbin/bpfc"
          RPATH "")
   ENDIF(EXISTS "$ENV{DESTDIR}/usr/sbin/bpfc")
-  FILE(INSTALL DESTINATION "/usr/sbin" TYPE EXECUTABLE FILES "/home/markus/Desktop/netsniff-ng_search/src/build/bpfc/bpfc")
+  FILE(INSTALL DESTINATION "/usr/sbin" TYPE EXECUTABLE FILES "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/bpfc")
   IF(EXISTS "$ENV{DESTDIR}/usr/sbin/bpfc")
     IF(CMAKE_INSTALL_DO_STRIP)
       EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/sbin/bpfc")

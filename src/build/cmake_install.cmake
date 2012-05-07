@@ -1,4 +1,4 @@
-# Install script for directory: /home/markus/Desktop/netsniff-ng_search/src
+# Install script for directory: /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,13 +38,13 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/ifpps/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/trafgen/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/bpfc/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/ashunt/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/curvetun/cmake_install.cmake")
-  INCLUDE("/home/markus/Desktop/netsniff-ng_search/src/build/flowtop/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/ifpps/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/ashunt/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/curvetun/cmake_install.cmake")
+  INCLUDE("/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/flowtop/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -54,7 +54,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/markus/Desktop/netsniff-ng_search/src/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/markus/Desktop/netsniff-ng_search/src/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

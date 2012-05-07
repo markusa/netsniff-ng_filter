@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/markus/Desktop/netsniff-ng_search/src
+CMAKE_SOURCE_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/markus/Desktop/netsniff-ng_search/src/build
+CMAKE_BINARY_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build
 
 # Include any dependencies generated for this target.
 include trafgen/CMakeFiles/trafgen.dir/depend.make
@@ -48,17 +48,17 @@ include trafgen/CMakeFiles/trafgen.dir/flags.make
 
 trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o: ../xmalloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xmalloc.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xmalloc.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c
 
 trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/xmalloc.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c > CMakeFiles/trafgen.dir/__/xmalloc.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c > CMakeFiles/trafgen.dir/__/xmalloc.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/xmalloc.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c -o CMakeFiles/trafgen.dir/__/xmalloc.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c -o CMakeFiles/trafgen.dir/__/xmalloc.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o.requires
@@ -72,17 +72,17 @@ trafgen/CMakeFiles/trafgen.dir/__/xmalloc.c.o.provides.build: trafgen/CMakeFiles
 
 trafgen/CMakeFiles/trafgen.dir/__/xio.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/xio.c.o: ../xio.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/xio.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xio.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xio.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xio.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c
 
 trafgen/CMakeFiles/trafgen.dir/__/xio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/xio.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xio.c > CMakeFiles/trafgen.dir/__/xio.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c > CMakeFiles/trafgen.dir/__/xio.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/xio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/xio.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xio.c -o CMakeFiles/trafgen.dir/__/xio.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c -o CMakeFiles/trafgen.dir/__/xio.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/xio.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/xio.c.o.requires
@@ -96,17 +96,17 @@ trafgen/CMakeFiles/trafgen.dir/__/xio.c.o.provides.build: trafgen/CMakeFiles/tra
 
 trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o: ../xsys.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xsys.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xsys.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xsys.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c
 
 trafgen/CMakeFiles/trafgen.dir/__/xsys.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/xsys.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xsys.c > CMakeFiles/trafgen.dir/__/xsys.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c > CMakeFiles/trafgen.dir/__/xsys.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/xsys.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/xsys.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xsys.c -o CMakeFiles/trafgen.dir/__/xsys.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c -o CMakeFiles/trafgen.dir/__/xsys.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o.requires
@@ -120,17 +120,17 @@ trafgen/CMakeFiles/trafgen.dir/__/xsys.c.o.provides.build: trafgen/CMakeFiles/tr
 
 trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o: ../xstring.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xstring.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xstring.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/xstring.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c
 
 trafgen/CMakeFiles/trafgen.dir/__/xstring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/xstring.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xstring.c > CMakeFiles/trafgen.dir/__/xstring.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c > CMakeFiles/trafgen.dir/__/xstring.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/xstring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/xstring.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xstring.c -o CMakeFiles/trafgen.dir/__/xstring.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c -o CMakeFiles/trafgen.dir/__/xstring.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o.requires
@@ -144,17 +144,17 @@ trafgen/CMakeFiles/trafgen.dir/__/xstring.c.o.provides.build: trafgen/CMakeFiles
 
 trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o: ../mtrand.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/mtrand.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/mtrand.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/mtrand.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c
 
 trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/mtrand.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/mtrand.c > CMakeFiles/trafgen.dir/__/mtrand.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c > CMakeFiles/trafgen.dir/__/mtrand.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/mtrand.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/mtrand.c -o CMakeFiles/trafgen.dir/__/mtrand.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c -o CMakeFiles/trafgen.dir/__/mtrand.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o.requires
@@ -168,17 +168,17 @@ trafgen/CMakeFiles/trafgen.dir/__/mtrand.c.o.provides.build: trafgen/CMakeFiles/
 
 trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o: ../ring_tx.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/ring_tx.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/ring_tx.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c
 
 trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/ring_tx.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c > CMakeFiles/trafgen.dir/__/ring_tx.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c > CMakeFiles/trafgen.dir/__/ring_tx.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/ring_tx.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c -o CMakeFiles/trafgen.dir/__/ring_tx.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c -o CMakeFiles/trafgen.dir/__/ring_tx.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o.requires
@@ -192,17 +192,17 @@ trafgen/CMakeFiles/trafgen.dir/__/ring_tx.c.o.provides.build: trafgen/CMakeFiles
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o: ../trafgen_cli.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/trafgen_cli.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/trafgen_cli.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/trafgen_cli.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen_cli.c
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/trafgen_cli.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/trafgen_cli.c > CMakeFiles/trafgen.dir/__/trafgen_cli.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen_cli.c > CMakeFiles/trafgen.dir/__/trafgen_cli.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/trafgen_cli.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/trafgen_cli.c -o CMakeFiles/trafgen.dir/__/trafgen_cli.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen_cli.c -o CMakeFiles/trafgen.dir/__/trafgen_cli.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o.requires
@@ -216,17 +216,17 @@ trafgen/CMakeFiles/trafgen.dir/__/trafgen_cli.c.o.provides.build: trafgen/CMakeF
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o: trafgen/CMakeFiles/trafgen.dir/flags.make
 trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o: ../trafgen.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/trafgen.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/trafgen.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/trafgen.dir/__/trafgen.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen.c
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trafgen.dir/__/trafgen.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/trafgen.c > CMakeFiles/trafgen.dir/__/trafgen.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen.c > CMakeFiles/trafgen.dir/__/trafgen.c.i
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trafgen.dir/__/trafgen.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/trafgen.c -o CMakeFiles/trafgen.dir/__/trafgen.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen.c -o CMakeFiles/trafgen.dir/__/trafgen.c.s
 
 trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o.requires:
 .PHONY : trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o.requires
@@ -263,7 +263,7 @@ trafgen/trafgen: trafgen/CMakeFiles/trafgen.dir/__/trafgen.c.o
 trafgen/trafgen: trafgen/CMakeFiles/trafgen.dir/build.make
 trafgen/trafgen: trafgen/CMakeFiles/trafgen.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable trafgen"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trafgen.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trafgen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 trafgen/CMakeFiles/trafgen.dir/build: trafgen/trafgen
@@ -280,10 +280,10 @@ trafgen/CMakeFiles/trafgen.dir/requires: trafgen/CMakeFiles/trafgen.dir/__/trafg
 .PHONY : trafgen/CMakeFiles/trafgen.dir/requires
 
 trafgen/CMakeFiles/trafgen.dir/clean:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/trafgen && $(CMAKE_COMMAND) -P CMakeFiles/trafgen.dir/cmake_clean.cmake
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen && $(CMAKE_COMMAND) -P CMakeFiles/trafgen.dir/cmake_clean.cmake
 .PHONY : trafgen/CMakeFiles/trafgen.dir/clean
 
 trafgen/CMakeFiles/trafgen.dir/depend:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src/trafgen /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build/trafgen /home/markus/Desktop/netsniff-ng_search/src/build/trafgen/CMakeFiles/trafgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/CMakeFiles/trafgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : trafgen/CMakeFiles/trafgen.dir/depend
 

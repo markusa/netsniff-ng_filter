@@ -32,24 +32,24 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/markus/Desktop/netsniff-ng_search/src
+CMAKE_SOURCE_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/markus/Desktop/netsniff-ng_search/src/build
+CMAKE_BINARY_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build
 
 # Utility rule file for man-bpfc.
 
 bpfc/CMakeFiles/man-bpfc: bpfc/bpfc.8.gz
 
 bpfc/bpfc.8.gz: bpfc/bpfc.8
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating bpfc.8.gz"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/bpfc && /bin/gzip -c /home/markus/Desktop/netsniff-ng_search/src/build/bpfc/bpfc.8 > /home/markus/Desktop/netsniff-ng_search/src/build/bpfc/bpfc.8.gz
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc && /bin/gzip -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/bpfc.8 > /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/bpfc.8.gz
 
 bpfc/bpfc.8: ../bpfc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating bpfc.8"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/bpfc && /usr/bin/pod2man --section 8 --center netsniff-ng-toolkit --release --stderr --name bpfc /home/markus/Desktop/netsniff-ng_search/src/bpfc.c > /home/markus/Desktop/netsniff-ng_search/src/build/bpfc/bpfc.8
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc && /usr/bin/pod2man --section 8 --center netsniff-ng-toolkit --release --stderr --name bpfc /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpfc.c > /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/bpfc.8
 
 man-bpfc: bpfc/CMakeFiles/man-bpfc
 man-bpfc: bpfc/bpfc.8.gz
@@ -62,10 +62,10 @@ bpfc/CMakeFiles/man-bpfc.dir/build: man-bpfc
 .PHONY : bpfc/CMakeFiles/man-bpfc.dir/build
 
 bpfc/CMakeFiles/man-bpfc.dir/clean:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/bpfc && $(CMAKE_COMMAND) -P CMakeFiles/man-bpfc.dir/cmake_clean.cmake
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc && $(CMAKE_COMMAND) -P CMakeFiles/man-bpfc.dir/cmake_clean.cmake
 .PHONY : bpfc/CMakeFiles/man-bpfc.dir/clean
 
 bpfc/CMakeFiles/man-bpfc.dir/depend:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src/bpfc /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build/bpfc /home/markus/Desktop/netsniff-ng_search/src/build/bpfc/CMakeFiles/man-bpfc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpfc /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/CMakeFiles/man-bpfc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : bpfc/CMakeFiles/man-bpfc.dir/depend
 

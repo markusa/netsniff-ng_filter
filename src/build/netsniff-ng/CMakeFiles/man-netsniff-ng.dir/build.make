@@ -32,24 +32,24 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/markus/Desktop/netsniff-ng_search/src
+CMAKE_SOURCE_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/markus/Desktop/netsniff-ng_search/src/build
+CMAKE_BINARY_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build
 
 # Utility rule file for man-netsniff-ng.
 
 netsniff-ng/CMakeFiles/man-netsniff-ng: netsniff-ng/netsniff-ng.8.gz
 
 netsniff-ng/netsniff-ng.8.gz: netsniff-ng/netsniff-ng.8
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating netsniff-ng.8.gz"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /bin/gzip -c /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8 > /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8.gz
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /bin/gzip -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8 > /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8.gz
 
 netsniff-ng/netsniff-ng.8: ../netsniff-ng.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating netsniff-ng.8"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/pod2man --section 8 --center netsniff-ng-toolkit --release --stderr --name netsniff-ng /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng.c > /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/pod2man --section 8 --center netsniff-ng-toolkit --release --stderr --name netsniff-ng /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng.c > /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/netsniff-ng.8
 
 man-netsniff-ng: netsniff-ng/CMakeFiles/man-netsniff-ng
 man-netsniff-ng: netsniff-ng/netsniff-ng.8.gz
@@ -62,10 +62,10 @@ netsniff-ng/CMakeFiles/man-netsniff-ng.dir/build: man-netsniff-ng
 .PHONY : netsniff-ng/CMakeFiles/man-netsniff-ng.dir/build
 
 netsniff-ng/CMakeFiles/man-netsniff-ng.dir/clean:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -P CMakeFiles/man-netsniff-ng.dir/cmake_clean.cmake
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -P CMakeFiles/man-netsniff-ng.dir/cmake_clean.cmake
 .PHONY : netsniff-ng/CMakeFiles/man-netsniff-ng.dir/clean
 
 netsniff-ng/CMakeFiles/man-netsniff-ng.dir/depend:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/man-netsniff-ng.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/man-netsniff-ng.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : netsniff-ng/CMakeFiles/man-netsniff-ng.dir/depend
 

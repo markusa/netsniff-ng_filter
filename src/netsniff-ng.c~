@@ -192,7 +192,7 @@ Please report bugs to <bugs@netsniff-ng.org>
 
 =cut
 
-*/
+*/s
 
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -256,8 +256,8 @@ struct tx_stats {
 
 volatile sig_atomic_t sigint = 0;
 
-const char *buffer_pkt2 ="s";
-char *buffer_pkt = buffer_pkt2;
+// const char *buffer_pkt2 ="s";
+char *buffer_pkt;
 // char char_null[] = "";
 // buffer_pkt = &char_null;
 

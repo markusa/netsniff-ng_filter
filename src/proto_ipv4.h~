@@ -21,6 +21,7 @@
 #include "pkt_buff.h"
 #include "built_in.h"
 
+
 struct ipv4hdr {
 #if defined(__LITTLE_ENDIAN_BITFIELD)
 	__extension__ uint8_t h_ihl:4,
@@ -67,6 +68,9 @@ static inline void ipv4(struct pkt_buff *pkt)
 	if (!ip)
 		return;
 
+tprintf("%p",pkt->filter);
+(*pkt->filter).ip4.ipv4 = 0;
+
 	frag_off = ntohs(ip->h_frag_off);
 	csum = calc_csum(ip, ip->h_ihl * 4, 0);
 
@@ -82,7 +86,7 @@ static inline void ipv4(struct pkt_buff *pkt)
 	alloc_string(*pkt->buffer_pkt,"IHL (%u), ", ip->h_ihl);
 	alloc_string(*pkt->buffer_pkt,"Tlen (%u), ", ntohs(ip->h_tot_len));
 	alloc_string(*pkt->buffer_pkt,"ID (%u), ", ntohs(ip->h_id));
-	alloc_string(*pkt->buffer_pkt,"Res (%u), NoFrag (%u), MoreFrag (%u),
+	alloc_string(*pkt->buffer_pkt,"Res (%u), NoFrag (%u), MoreFrag (%u),\
 FragOff (%u), ",
 		FRAG_OFF_RESERVED_FLAG(frag_off) ? 1 : 0,
 		FRAG_OFF_NO_FRAGMENT_FLAG(frag_off) ? 1 : 0,
@@ -124,7 +128,7 @@ packets,
 			 */
 			opt_len = *(++opt);
 			if (opt_len > opts_len) {
-				alloc_string(*pkt->buffer_pkt,", Len (%u,
+				alloc_string(*pkt->buffer_pkt,", Len (%u,\
 invalid) ]\n", opt_len);
 				goto out;
 			} else

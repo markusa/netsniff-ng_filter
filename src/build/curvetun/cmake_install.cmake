@@ -1,4 +1,4 @@
-# Install script for directory: /home/markus/Desktop/netsniff-ng_search/src/curvetun
+# Install script for directory: /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/curvetun
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

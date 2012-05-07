@@ -21,6 +21,7 @@
 #include "pkt_buff.h"
 #include "built_in.h"
 
+
 struct ipv4hdr {
 #if defined(__LITTLE_ENDIAN_BITFIELD)
 	__extension__ uint8_t h_ihl:4,
@@ -66,6 +67,8 @@ static inline void ipv4(struct pkt_buff *pkt)
 
 	if (!ip)
 		return;
+
+(*pkt->filter).ip4.ipv4 = 0;
 
 	frag_off = ntohs(ip->h_frag_off);
 	csum = calc_csum(ip, ip->h_ihl * 4, 0);

@@ -24,6 +24,7 @@ static struct hash_table eth_ports_udp;
 static struct hash_table eth_ports_tcp;
 static struct hash_table eth_oui;
 
+
 struct vendor_id {
 	unsigned int id;
 	char *vendor;

@@ -1,4 +1,4 @@
-# Install script for directory: /home/markus/Desktop/netsniff-ng_search/src/trafgen
+# Install script for directory: /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/trafgen
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man8" TYPE FILE FILES "/home/markus/Desktop/netsniff-ng_search/src/build/trafgen/trafgen.8.gz")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man8" TYPE FILE FILES "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/trafgen.8.gz")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -42,7 +42,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}/usr/sbin/trafgen"
          RPATH "")
   ENDIF(EXISTS "$ENV{DESTDIR}/usr/sbin/trafgen")
-  FILE(INSTALL DESTINATION "/usr/sbin" TYPE EXECUTABLE FILES "/home/markus/Desktop/netsniff-ng_search/src/build/trafgen/trafgen")
+  FILE(INSTALL DESTINATION "/usr/sbin" TYPE EXECUTABLE FILES "/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/trafgen")
   IF(EXISTS "$ENV{DESTDIR}/usr/sbin/trafgen")
     IF(CMAKE_INSTALL_DO_STRIP)
       EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/sbin/trafgen")

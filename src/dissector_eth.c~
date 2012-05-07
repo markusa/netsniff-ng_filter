@@ -24,6 +24,8 @@ static struct hash_table eth_ports_udp;
 static struct hash_table eth_ports_tcp;
 static struct hash_table eth_oui;
 
+static struct ipv4_search ipv4s;
+
 struct vendor_id {
 	unsigned int id;
 	char *vendor;
@@ -91,30 +93,30 @@ static inline void dissector_init_exit(int type)
 static void dissector_init_layer_2(int type)
 {
 	init_hash(&eth_lay2);
-	INSERT_HASH_PROTOS(arp_ops, eth_lay2);
+// 	INSERT_HASH_PROTOS(arp_ops, eth_lay2);
 	INSERT_HASH_PROTOS(vlan_ops, eth_lay2);
 	INSERT_HASH_PROTOS(ipv4_ops, eth_lay2);
-	INSERT_HASH_PROTOS(ipv6_ops, eth_lay2);
+// 	INSERT_HASH_PROTOS(ipv6_ops, eth_lay2);
 	for_each_hash_int(&eth_lay2, dissector_set_print_type, type);
 }
 
 static void dissector_init_layer_3(int type)
 {
 	init_hash(&eth_lay3);
-	INSERT_HASH_PROTOS(icmp_ops, eth_lay3);
-	INSERT_HASH_PROTOS(icmpv6_ops, eth_lay3);
-	INSERT_HASH_PROTOS(igmp_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ip_auth_hdr_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ip_esp_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_dest_opts_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_fragm_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_hop_by_hop_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_in_ipv4_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_mobility_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_no_next_header_ops, eth_lay3);
-	INSERT_HASH_PROTOS(ipv6_routing_ops, eth_lay3);
-	INSERT_HASH_PROTOS(tcp_ops, eth_lay3);
-	INSERT_HASH_PROTOS(udp_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(icmp_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(icmpv6_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(igmp_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ip_auth_hdr_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ip_esp_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_dest_opts_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_fragm_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_hop_by_hop_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_in_ipv4_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_mobility_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_no_next_header_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(ipv6_routing_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(tcp_ops, eth_lay3);
+// 	INSERT_HASH_PROTOS(udp_ops, eth_lay3);
 	for_each_hash_int(&eth_lay3, dissector_set_print_type, type);
 }
 

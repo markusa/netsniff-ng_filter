@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/markus/Desktop/netsniff-ng_search/src
+CMAKE_SOURCE_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/markus/Desktop/netsniff-ng_search/src/build
+CMAKE_BINARY_DIR = /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build
 
 # Include any dependencies generated for this target.
 include netsniff-ng/CMakeFiles/netsniff-ng.dir/depend.make
@@ -48,17 +48,17 @@ include netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o: ../hash.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/hash.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/hash.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/hash.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/hash.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/hash.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/hash.c > CMakeFiles/netsniff-ng.dir/__/hash.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/hash.c > CMakeFiles/netsniff-ng.dir/__/hash.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/hash.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/hash.c -o CMakeFiles/netsniff-ng.dir/__/hash.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/hash.c -o CMakeFiles/netsniff-ng.dir/__/hash.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o.requires
@@ -72,17 +72,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/hash.c.o.provides.build: netsniff-ng/C
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o: ../dissector.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/dissector.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/dissector.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/dissector.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/dissector.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/dissector.c > CMakeFiles/netsniff-ng.dir/__/dissector.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector.c > CMakeFiles/netsniff-ng.dir/__/dissector.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/dissector.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/dissector.c -o CMakeFiles/netsniff-ng.dir/__/dissector.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector.c -o CMakeFiles/netsniff-ng.dir/__/dissector.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o.requires
@@ -96,17 +96,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector.c.o.provides.build: netsniff
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o: ../dissector_eth.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/dissector_eth.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector_eth.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/dissector_eth.c > CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector_eth.c > CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/dissector_eth.c -o CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/dissector_eth.c -o CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o.requires
@@ -120,17 +120,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/dissector_eth.c.o.provides.build: nets
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o: ../xmalloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/xmalloc.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c > CMakeFiles/netsniff-ng.dir/__/xmalloc.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c > CMakeFiles/netsniff-ng.dir/__/xmalloc.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/xmalloc.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xmalloc.c -o CMakeFiles/netsniff-ng.dir/__/xmalloc.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xmalloc.c -o CMakeFiles/netsniff-ng.dir/__/xmalloc.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o.requires
@@ -144,17 +144,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xmalloc.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o: ../xio.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xio.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xio.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xio.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/xio.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xio.c > CMakeFiles/netsniff-ng.dir/__/xio.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c > CMakeFiles/netsniff-ng.dir/__/xio.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/xio.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xio.c -o CMakeFiles/netsniff-ng.dir/__/xio.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xio.c -o CMakeFiles/netsniff-ng.dir/__/xio.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o.requires
@@ -168,17 +168,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xio.c.o.provides.build: netsniff-ng/CM
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o: ../xsys.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xsys.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xsys.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xsys.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/xsys.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xsys.c > CMakeFiles/netsniff-ng.dir/__/xsys.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c > CMakeFiles/netsniff-ng.dir/__/xsys.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/xsys.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xsys.c -o CMakeFiles/netsniff-ng.dir/__/xsys.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xsys.c -o CMakeFiles/netsniff-ng.dir/__/xsys.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o.requires
@@ -192,17 +192,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xsys.c.o.provides.build: netsniff-ng/C
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o: ../xstring.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xstring.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/xstring.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/xstring.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/xstring.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/xstring.c > CMakeFiles/netsniff-ng.dir/__/xstring.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c > CMakeFiles/netsniff-ng.dir/__/xstring.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/xstring.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/xstring.c -o CMakeFiles/netsniff-ng.dir/__/xstring.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/xstring.c -o CMakeFiles/netsniff-ng.dir/__/xstring.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o.requires
@@ -216,17 +216,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/xstring.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o: ../bpf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/bpf.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/bpf.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/bpf.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpf.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/bpf.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/bpf.c > CMakeFiles/netsniff-ng.dir/__/bpf.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpf.c > CMakeFiles/netsniff-ng.dir/__/bpf.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/bpf.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/bpf.c -o CMakeFiles/netsniff-ng.dir/__/bpf.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/bpf.c -o CMakeFiles/netsniff-ng.dir/__/bpf.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o.requires
@@ -240,17 +240,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/bpf.c.o.provides.build: netsniff-ng/CM
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o: ../pcap.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/pcap.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/pcap.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/pcap.c > CMakeFiles/netsniff-ng.dir/__/pcap.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap.c > CMakeFiles/netsniff-ng.dir/__/pcap.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/pcap.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/pcap.c -o CMakeFiles/netsniff-ng.dir/__/pcap.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap.c -o CMakeFiles/netsniff-ng.dir/__/pcap.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o.requires
@@ -264,17 +264,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap.c.o.provides.build: netsniff-ng/C
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o: ../pcap_rw.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/pcap_rw.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_rw.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/pcap_rw.c > CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_rw.c > CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/pcap_rw.c -o CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_rw.c -o CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o.requires
@@ -288,17 +288,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_rw.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o: ../pcap_sg.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/pcap_sg.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_sg.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/pcap_sg.c > CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_sg.c > CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/pcap_sg.c -o CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_sg.c -o CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o.requires
@@ -312,17 +312,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_sg.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o: ../pcap_mmap.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/pcap_mmap.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_mmap.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/pcap_mmap.c > CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_mmap.c > CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/pcap_mmap.c -o CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/pcap_mmap.c -o CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o.requires
@@ -336,17 +336,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/pcap_mmap.c.o.provides.build: netsniff
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o: ../ring_rx.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/ring_rx.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_rx.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/ring_rx.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/ring_rx.c > CMakeFiles/netsniff-ng.dir/__/ring_rx.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_rx.c > CMakeFiles/netsniff-ng.dir/__/ring_rx.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/ring_rx.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/ring_rx.c -o CMakeFiles/netsniff-ng.dir/__/ring_rx.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_rx.c -o CMakeFiles/netsniff-ng.dir/__/ring_rx.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o.requires
@@ -360,17 +360,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_rx.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o: ../ring_tx.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/ring_tx.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c > CMakeFiles/netsniff-ng.dir/__/ring_tx.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c > CMakeFiles/netsniff-ng.dir/__/ring_tx.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/ring_tx.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/ring_tx.c -o CMakeFiles/netsniff-ng.dir/__/ring_tx.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/ring_tx.c -o CMakeFiles/netsniff-ng.dir/__/ring_tx.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o.requires
@@ -384,17 +384,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/ring_tx.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o: ../mtrand.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/mtrand.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/mtrand.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/mtrand.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/mtrand.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/mtrand.c > CMakeFiles/netsniff-ng.dir/__/mtrand.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c > CMakeFiles/netsniff-ng.dir/__/mtrand.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/mtrand.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/mtrand.c -o CMakeFiles/netsniff-ng.dir/__/mtrand.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/mtrand.c -o CMakeFiles/netsniff-ng.dir/__/mtrand.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o.requires
@@ -408,17 +408,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/mtrand.c.o.provides.build: netsniff-ng
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o: ../tprintf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/tprintf.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/tprintf.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/tprintf.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/tprintf.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/tprintf.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/tprintf.c > CMakeFiles/netsniff-ng.dir/__/tprintf.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/tprintf.c > CMakeFiles/netsniff-ng.dir/__/tprintf.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/tprintf.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/tprintf.c -o CMakeFiles/netsniff-ng.dir/__/tprintf.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/tprintf.c -o CMakeFiles/netsniff-ng.dir/__/tprintf.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o.requires
@@ -432,17 +432,17 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/__/tprintf.c.o.provides.build: netsniff-n
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o: netsniff-ng/CMakeFiles/netsniff-ng.dir/flags.make
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o: ../netsniff-ng.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o   -c /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng.c
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o   -c /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng.c
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.i"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng.c > CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.i
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng.c > CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.i
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.s"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng.c -o CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.s
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng.c -o CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.s
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o.requires:
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c.o.requires
@@ -497,7 +497,7 @@ netsniff-ng/netsniff-ng: netsniff-ng/CMakeFiles/netsniff-ng.dir/__/netsniff-ng.c
 netsniff-ng/netsniff-ng: netsniff-ng/CMakeFiles/netsniff-ng.dir/build.make
 netsniff-ng/netsniff-ng: netsniff-ng/CMakeFiles/netsniff-ng.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable netsniff-ng"
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/netsniff-ng.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/netsniff-ng.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 netsniff-ng/CMakeFiles/netsniff-ng.dir/build: netsniff-ng/netsniff-ng
@@ -523,10 +523,10 @@ netsniff-ng/CMakeFiles/netsniff-ng.dir/requires: netsniff-ng/CMakeFiles/netsniff
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/requires
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/clean:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -P CMakeFiles/netsniff-ng.dir/cmake_clean.cmake
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng && $(CMAKE_COMMAND) -P CMakeFiles/netsniff-ng.dir/cmake_clean.cmake
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/clean
 
 netsniff-ng/CMakeFiles/netsniff-ng.dir/depend:
-	cd /home/markus/Desktop/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/netsniff-ng_search/src /home/markus/Desktop/netsniff-ng_search/src/netsniff-ng /home/markus/Desktop/netsniff-ng_search/src/build /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng /home/markus/Desktop/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/netsniff-ng.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/markus/Desktop/git_netsniff/netsniff-ng_search/src /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/netsniff-ng /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng /home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/netsniff-ng.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : netsniff-ng/CMakeFiles/netsniff-ng.dir/depend
 
