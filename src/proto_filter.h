@@ -7,6 +7,8 @@
 #ifndef PROTO_FILTER_H
 #define PROTO_FILTER_H
 
+/* Initialized in dissector.c -> dissector_main() */
+
 struct ipv4_filter {
   uint8_t ipv4;
   uint8_t proto;
