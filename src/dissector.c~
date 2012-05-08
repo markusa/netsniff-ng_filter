@@ -50,6 +50,7 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 	struct protocol *proto;
 pkt->buffer_pkt = buffer_pkt;
 struct filter_all filter;
+memset(&filter,0,sizeof(struct filter_all));
 pkt->filter = &filter;
 	for (pkt->proto = start; pkt->proto; ) {
 		if (unlikely(!pkt->proto->process))
@@ -59,14 +60,14 @@ pkt->filter = &filter;
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
-if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
-	tprintf("%s\n\n",*buffer_pkt);
-	xfree(*buffer_pkt);
+	if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==6) {
+		tprintf("%s\n\n",*buffer_pkt);
+		xfree(*buffer_pkt);
 
 
-	if (end && likely(end->process))
-		end->process(pkt);
-}
+		if (end && likely(end->process))
+			end->process(pkt);
+	}
 }
 
 void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,

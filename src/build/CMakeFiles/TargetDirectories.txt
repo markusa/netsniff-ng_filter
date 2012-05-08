@@ -1,7 +1,0 @@
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/CMakeFiles/bpfc.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/CMakeFiles/man.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/bpfc/CMakeFiles/man-bpfc.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/man-netsniff-ng.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/CMakeFiles/man-trafgen.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/netsniff-ng/CMakeFiles/netsniff-ng.dir
-/home/markus/Desktop/git_netsniff/netsniff-ng_search/src/build/trafgen/CMakeFiles/trafgen.dir
