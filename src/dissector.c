@@ -46,7 +46,7 @@ int dissector_set_print_type(void *ptr, int type)
 
 static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 			   struct protocol *end, char **buffer_pkt,
-			   uint8_t *switch_buf)
+			   uint8_t *switch_buf, uint8_t *stats)
 {
 	struct protocol *proto;
 	
@@ -64,20 +64,26 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
+	
 	if(*buffer_pkt){
 	    if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
-		    tprintf("%s\n\n",*buffer_pkt);
+		    tprintf("%s",*buffer_pkt);
 		    xfree(*buffer_pkt);
+	    }
+	    else {
+		    *stats = 0;
+		    return;
+	    }
 	}
 
 
-		if (end && likely(end->process))
-			end->process(pkt);
-	}
+	if (end && likely(end->process))
+		    end->process(pkt);
 }
 
-void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,
-				      char **buffer_pkt, uint8_t *switch_buf)
+void dissector_entry_point(uint8_t *packet, struct frame_map *hdr, int linktype,
+			      int mode, char **buffer_pkt, uint8_t *switch_buf,
+			      uint8_t *stats)
 {
 	struct protocol *proto_start = NULL;
 	struct protocol *proto_end = NULL;
@@ -86,7 +92,7 @@ void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,
 	if (mode == FNTTYPE_PRINT_NONE)
 		return;
 
-	pkt = pkt_alloc(packet, len);
+	pkt = pkt_alloc(packet, hdr->tp_h.tp_snaplen);
 
 	switch (linktype) {
 	case LINKTYPE_EN10MB:
@@ -97,7 +103,8 @@ void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,
 		panic("Linktype not supported!\n");
 	};
 
-	dissector_main(pkt, proto_start, proto_end, buffer_pkt, switch_buf);
+	dissector_main(pkt, proto_start, proto_end, buffer_pkt, switch_buf,
+								    stats);
 
 
 	switch (mode) {

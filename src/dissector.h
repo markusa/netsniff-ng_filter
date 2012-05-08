@@ -35,8 +35,9 @@
 #define FNTTYPE_PRINT_NONE	5
 
 extern void dissector_init_all(int fnttype);
-extern void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int
-mode, char **buffer_pkt, uint8_t *switch_buf);
+extern void dissector_entry_point(uint8_t *packet, struct frame_map *hdr,
+				  int linktype, int mode, char **buffer_pkt,
+				  uint8_t *switch_buf, uint8_t *stats);
 extern void dissector_cleanup_all(void);
 extern int dissector_set_print_type(void *ptr, int type);
 

@@ -427,9 +427,9 @@ static void enter_mode_pcap_to_tx(struct mode *mode)
 
 			show_frame_hdr(hdr, mode->print_mode,RING_MODE_EGRESS,
 					      &buffer_pkt, NULL);
-			dissector_entry_point(out, hdr->tp_h.tp_snaplen,
+			dissector_entry_point(out, hdr,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt, NULL);
+					      &buffer_pkt, NULL, NULL);
 
 			kernel_may_pull_from_tx(&hdr->tp_h);
 			next_slot_prewr(&it, &tx_ring);
@@ -569,9 +569,9 @@ static void enter_mode_rx_to_tx(struct mode *mode)
 
 			show_frame_hdr(hdr_in, mode->print_mode,
 				       RING_MODE_INGRESS, &buffer_pkt, NULL);
-			dissector_entry_point(in, hdr_in->tp_h.tp_snaplen,
+			dissector_entry_point(in, hdr_in,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt, NULL);
+					      &buffer_pkt, NULL, NULL);
 
 			if (frame_cnt_max != 0 && fcnt >= frame_cnt_max) {
 				sigint = 1;
@@ -611,6 +611,7 @@ static void enter_mode_read_pcap(struct mode *mode)
 	struct frame_map fm;
 	uint8_t *out;
 	uint8_t switch_buf = 0;
+	uint8_t cnt_stat;
 	size_t out_len;
 	unsigned long trunced = 0;
 
@@ -625,10 +626,8 @@ static void enter_mode_read_pcap(struct mode *mode)
 		if (ret)
 			panic("error prepare reading pcap!\n");
 	}
-	if (mode->hlv){
+	if (mode->hlv)
 		switch_buf = 1;
-	}
-// 	tprintf("%p", switch_buf);
 
 	fmemset(&fm, 0, sizeof(fm));
 	fmemset(&bpf_ops, 0, sizeof(bpf_ops));
@@ -652,6 +651,8 @@ static void enter_mode_read_pcap(struct mode *mode)
 	}
 
 	while (likely(sigint == 0)) {
+		cnt_stat = 1;
+	  
 		do {
 			memset(&phdr, 0, sizeof(phdr));
 			ret = pcap_ops[mode->pcap]->read_pcap_pkt(fd, &phdr,
@@ -676,9 +677,14 @@ static void enter_mode_read_pcap(struct mode *mode)
 
 		show_frame_hdr(&fm, mode->print_mode, RING_MODE_EGRESS,
 				      &buffer_pkt, &switch_buf);
-		dissector_entry_point(out, fm.tp_h.tp_snaplen,
+		dissector_entry_point(out, &fm,
 				      mode->link_type, mode->print_mode,
-				      &buffer_pkt, &switch_buf);
+				      &buffer_pkt, &switch_buf, &cnt_stat);
+
+		if(!cnt_stat){
+			stats.tx_bytes -= fm.tp_h.tp_len;
+			stats.tx_packets--;
+		}
 
 		if (mode->device_out) {
 			int i = 0;
@@ -926,9 +932,9 @@ try_file:
 
 			show_frame_hdr(hdr, mode->print_mode, RING_MODE_INGRESS,
 					      &buffer_pkt, NULL);
-			dissector_entry_point(packet, hdr->tp_h.tp_snaplen,
+			dissector_entry_point(packet, hdr,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt, NULL);
+					      &buffer_pkt, NULL, NULL);
 
 			if (frame_cnt_max != 0 && fcnt >= frame_cnt_max) {
 				sigint = 1;
@@ -996,7 +1002,7 @@ static void help(void)
 	printf("                              host|broadcast|multicast|others|outgoing\n");
 	printf("  -F|--interval <uint>        Dump interval in sec if -o is a directory where\n");
 	printf("                              pcap files should be stored (default: 60)\n");
-	printf("  -L|--logical <str>          Logical filter like:\n");
+	printf("  -L|--logical <str>          Logical filter like (only with -i <pcap>)):\n");
 	printf("                              ipv4.proto == 6 && ipv4.hdr_len == 10\n");
 	printf("  -J|--jumbo-support          Support for 64KB Super Jumbo Frames\n");
 	printf("                              Default RX/TX slot: 2048Byte\n");
