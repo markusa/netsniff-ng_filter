@@ -36,7 +36,7 @@
 
 extern void dissector_init_all(int fnttype);
 extern void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int
-mode, char **buffer_pkt);
+mode, char **buffer_pkt, uint8_t *switch_buf);
 extern void dissector_cleanup_all(void);
 extern int dissector_set_print_type(void *ptr, int type);
 
@@ -50,7 +50,8 @@ static char *packet_types[]={
 };
 
 static inline void show_frame_hdr(struct frame_map *hdr, int mode,
-				  enum ring_mode rmode, char **buffer_pkt)
+				  enum ring_mode rmode, char **buffer_pkt,
+				  uint8_t *switch_buf)
 {
 	if (mode == FNTTYPE_PRINT_NONE)
 		return;
@@ -76,13 +77,9 @@ static inline void show_frame_hdr(struct frame_map *hdr, int mode,
 				hdr->s_ll.sll_ifindex, hdr->tp_h.tp_len,
 				hdr->tp_h.tp_sec, hdr->tp_h.tp_usec);
 		} else {
-			alloc_string(*buffer_pkt,"%u %u.%06u\n",
-				    hdr->tp_h.tp_len,
-				    hdr->tp_h.tp_sec, hdr->tp_h.tp_usec);
-
-// 			tprintf("%p\n",&buffer_pkt);
-// 			tprintf("%p\n",buffer_pkt);
-// 			tprintf("%s\n\n",*buffer_pkt);
+			alloc_string(*buffer_pkt,switch_buf,"%u %u.%06u\n",
+				    hdr->tp_h.tp_len, hdr->tp_h.tp_sec,
+				    hdr->tp_h.tp_usec);
 		}
 		break;
 	}

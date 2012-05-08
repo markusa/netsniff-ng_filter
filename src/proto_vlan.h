@@ -32,13 +32,16 @@ static inline void vlan(struct pkt_buff *pkt)
 
 	tci = ntohs(vlan->h_vlan_TCI);
 
-	alloc_string(*pkt->buffer_pkt," [ VLAN ");
-	alloc_string(*pkt->buffer_pkt,"Prio (%d), ", (tci & 0xE000) >> 13);
-	alloc_string(*pkt->buffer_pkt,"CFI (%d), ", (tci & 0x1000) >> 12);
-	alloc_string(*pkt->buffer_pkt,"ID (%d), ", (tci & 0x0FFF));
-	alloc_string(*pkt->buffer_pkt,"Proto (0x%.4x)",
-ntohs(vlan->h_vlan_encapsulated_proto));
-	alloc_string(*pkt->buffer_pkt," ]\n");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf," [ VLAN ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+		     "Prio (%d), ", (tci & 0xE000) >> 13);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+		     "CFI (%d), ", (tci & 0x1000) >> 12);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+		     "ID (%d), ", (tci & 0x0FFF));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Proto (0x%.4x)",
+		     ntohs(vlan->h_vlan_encapsulated_proto));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf," ]\n");
 
 	pkt_set_proto(pkt, &eth_lay2, ntohs(vlan->h_vlan_encapsulated_proto));
 }
@@ -53,7 +56,8 @@ static inline void vlan_less(struct pkt_buff *pkt)
 
 	tci = ntohs(vlan->h_vlan_TCI);
 
-	alloc_string(*pkt->buffer_pkt," VLAN%d", (tci & 0x0FFF));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+		     " VLAN%d", (tci & 0x0FFF));
 
 	pkt_set_proto(pkt, &eth_lay2, ntohs(vlan->h_vlan_encapsulated_proto));
 }

@@ -266,12 +266,13 @@ static unsigned long interval = TX_KERNEL_PULL_INT;
 static struct itimerval itimer;
 static volatile bool next_dump = false;
 
-static const char *short_options = "d:i:o:rf:MJt:S:k:n:b:B:HQmcsqXlvhF:";
+static const char *short_options = "d:i:o:L:rf:MJt:S:k:n:b:B:HQmcsqXlvhF:";
 
 static struct option long_options[] = {
 	{"dev", required_argument, 0, 'd'},
 	{"in", required_argument, 0, 'i'},
 	{"out", required_argument, 0, 'o'},
+	{"logical", required_argument, 0, 'L'},
 	{"rand", no_argument, 0, 'r'},
 	{"mmap", no_argument, 0, 'm'},
 	{"clrw", no_argument, 0, 'c'},
@@ -425,10 +426,10 @@ static void enter_mode_pcap_to_tx(struct mode *mode)
 			stats.tx_packets++;
 
 			show_frame_hdr(hdr, mode->print_mode,RING_MODE_EGRESS,
-					      &buffer_pkt);
+					      &buffer_pkt, NULL);
 			dissector_entry_point(out, hdr->tp_h.tp_snaplen,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt);
+					      &buffer_pkt, NULL);
 
 			kernel_may_pull_from_tx(&hdr->tp_h);
 			next_slot_prewr(&it, &tx_ring);
@@ -567,10 +568,10 @@ static void enter_mode_rx_to_tx(struct mode *mode)
 				next_slot(&it_out, &tx_ring);
 
 			show_frame_hdr(hdr_in, mode->print_mode,
-					      RING_MODE_INGRESS, &buffer_pkt);
+				       RING_MODE_INGRESS, &buffer_pkt, NULL);
 			dissector_entry_point(in, hdr_in->tp_h.tp_snaplen,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt);
+					      &buffer_pkt, NULL);
 
 			if (frame_cnt_max != 0 && fcnt >= frame_cnt_max) {
 				sigint = 1;
@@ -609,6 +610,7 @@ static void enter_mode_read_pcap(struct mode *mode)
 	struct tx_stats stats;
 	struct frame_map fm;
 	uint8_t *out;
+	uint8_t switch_buf = 0;
 	size_t out_len;
 	unsigned long trunced = 0;
 
@@ -623,6 +625,10 @@ static void enter_mode_read_pcap(struct mode *mode)
 		if (ret)
 			panic("error prepare reading pcap!\n");
 	}
+	if (mode->hlv){
+		switch_buf = 1;
+	}
+// 	tprintf("%p", switch_buf);
 
 	fmemset(&fm, 0, sizeof(fm));
 	fmemset(&bpf_ops, 0, sizeof(bpf_ops));
@@ -669,10 +675,10 @@ static void enter_mode_read_pcap(struct mode *mode)
 		stats.tx_packets++;
 
 		show_frame_hdr(&fm, mode->print_mode, RING_MODE_EGRESS,
-							    &buffer_pkt);
+				      &buffer_pkt, &switch_buf);
 		dissector_entry_point(out, fm.tp_h.tp_snaplen,
 				      mode->link_type, mode->print_mode,
-				      &buffer_pkt);
+				      &buffer_pkt, &switch_buf);
 
 		if (mode->device_out) {
 			int i = 0;
@@ -919,10 +925,10 @@ try_file:
 			}
 
 			show_frame_hdr(hdr, mode->print_mode, RING_MODE_INGRESS,
-					      &buffer_pkt);
+					      &buffer_pkt, NULL);
 			dissector_entry_point(packet, hdr->tp_h.tp_snaplen,
 					      mode->link_type, mode->print_mode,
-					      &buffer_pkt);
+					      &buffer_pkt, NULL);
 
 			if (frame_cnt_max != 0 && fcnt >= frame_cnt_max) {
 				sigint = 1;
@@ -990,6 +996,8 @@ static void help(void)
 	printf("                              host|broadcast|multicast|others|outgoing\n");
 	printf("  -F|--interval <uint>        Dump interval in sec if -o is a directory where\n");
 	printf("                              pcap files should be stored (default: 60)\n");
+	printf("  -L|--logical <str>          Logical filter like:\n");
+	printf("                              ipv4.proto == 6 && ipv4.hdr_len == 10\n");
 	printf("  -J|--jumbo-support          Support for 64KB Super Jumbo Frames\n");
 	printf("                              Default RX/TX slot: 2048Byte\n");
 	printf("  -n|--num <uint>             Number of packets until exit\n");
@@ -1101,6 +1109,10 @@ int main(int argc, char **argv)
 			break;
 		case 'f':
 			mode.filter = xstrdup(optarg);
+			break;
+		case 'L':
+			mode.hlv = xstrdup(optarg);
+			/* parse argument */
 			break;
 		case 'M':
 			mode.promiscuous = false;

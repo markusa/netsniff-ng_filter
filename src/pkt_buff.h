@@ -21,6 +21,7 @@ struct pkt_buff {
 	uint8_t      *tail;
 	unsigned int  size;
 	char	     **buffer_pkt;
+	uint8_t	     *switch_buf;
 	struct filter_all *filter;
 
 	struct protocol *proto;

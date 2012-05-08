@@ -45,13 +45,17 @@ int dissector_set_print_type(void *ptr, int type)
 }
 
 static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
-			   struct protocol *end, char **buffer_pkt)
+			   struct protocol *end, char **buffer_pkt,
+			   uint8_t *switch_buf)
 {
 	struct protocol *proto;
-pkt->buffer_pkt = buffer_pkt;
-struct filter_all filter;
-memset(&filter,0,sizeof(struct filter_all));
-pkt->filter = &filter;
+	
+	pkt->buffer_pkt = buffer_pkt;
+	struct filter_all filter;
+	memset(&filter,0,sizeof(struct filter_all));
+	pkt->filter = &filter;
+	pkt->switch_buf = switch_buf;
+
 	for (pkt->proto = start; pkt->proto; ) {
 		if (unlikely(!pkt->proto->process))
 			break;
@@ -60,9 +64,11 @@ pkt->filter = &filter;
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
-	if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
-		tprintf("%s\n\n",*buffer_pkt);
-		xfree(*buffer_pkt);
+	if(*buffer_pkt){
+	    if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
+		    tprintf("%s\n\n",*buffer_pkt);
+		    xfree(*buffer_pkt);
+	}
 
 
 		if (end && likely(end->process))
@@ -71,7 +77,7 @@ pkt->filter = &filter;
 }
 
 void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,
-				      char **buffer_pkt)
+				      char **buffer_pkt, uint8_t *switch_buf)
 {
 	struct protocol *proto_start = NULL;
 	struct protocol *proto_end = NULL;
@@ -91,7 +97,7 @@ void dissector_entry_point(uint8_t *packet, size_t len, int linktype, int mode,
 		panic("Linktype not supported!\n");
 	};
 
-	dissector_main(pkt, proto_start, proto_end, buffer_pkt);
+	dissector_main(pkt, proto_start, proto_end, buffer_pkt, switch_buf);
 
 
 	switch (mode) {
