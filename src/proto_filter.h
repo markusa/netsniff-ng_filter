@@ -14,8 +14,14 @@ struct ipv4_filter {
   uint8_t proto;
 };
 
+struct eth_filter {
+  uint8_t eth;
+  uint16_t proto;
+};
+
 struct filter_all {
   struct ipv4_filter ip4;
+  struct eth_filter eth;
 };
 
 #endif /* PROTO_FILTER_H */

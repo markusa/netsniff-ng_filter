@@ -26,6 +26,9 @@ static inline void ethernet(struct pkt_buff *pkt)
 	if (eth == NULL)
 		return;
 
+	(*pkt->filter).eth.eth = 1;
+	(*pkt->filter).eth.proto = ntohs(eth->h_proto);
+
 	src_mac = eth->h_source;
 	dst_mac = eth->h_dest;
 	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," [ Eth ");

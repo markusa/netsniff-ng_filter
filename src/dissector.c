@@ -66,13 +66,16 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 	}
 
 	if(*switch_filter){
-	    if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==6) {
+	    if((*pkt->filter).eth.proto==0x800 && (*pkt->filter).ip4.proto==6){
 		    if(*buffer_pkt) {
-			  tprintf("%s",*buffer_pkt);
+			  printf("%s",*buffer_pkt);
 			  xfree(*buffer_pkt);
 		    }
 	    }
 	    else {
+		    if(*buffer_pkt) {
+			  xfree(*buffer_pkt);
+		    }
 		    *stats = 0;
 		    return;
 	    }
