@@ -46,7 +46,7 @@ int dissector_set_print_type(void *ptr, int type)
 
 static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 			   struct protocol *end, char **buffer_pkt,
-			   uint8_t *switch_buf, uint8_t *stats)
+			   uint8_t *switch_filter, uint8_t *stats)
 {
 	struct protocol *proto;
 	
@@ -54,7 +54,7 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 	struct filter_all filter;
 	memset(&filter,0,sizeof(struct filter_all));
 	pkt->filter = &filter;
-	pkt->switch_buf = switch_buf;
+	pkt->switch_filter = switch_filter;
 
 	for (pkt->proto = start; pkt->proto; ) {
 		if (unlikely(!pkt->proto->process))
@@ -64,11 +64,13 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 		pkt->proto = NULL;
 		proto->process(pkt);
 	}
-	
-	if(*buffer_pkt){
-	    if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==2) {
-		    tprintf("%s",*buffer_pkt);
-		    xfree(*buffer_pkt);
+
+	if(*switch_filter){
+	    if((*pkt->filter).ip4.ipv4 && (*pkt->filter).ip4.proto==6) {
+		    if(*buffer_pkt) {
+			  tprintf("%s",*buffer_pkt);
+			  xfree(*buffer_pkt);
+		    }
 	    }
 	    else {
 		    *stats = 0;
@@ -77,13 +79,13 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 	}
 
 
-	if (end && likely(end->process))
+	if (end && likely(end->process) && *switch_filter != 2)
 		    end->process(pkt);
 }
 
 void dissector_entry_point(uint8_t *packet, struct frame_map *hdr, int linktype,
-			      int mode, char **buffer_pkt, uint8_t *switch_buf,
-			      uint8_t *stats)
+			      int mode, char **buffer_pkt,
+			      uint8_t *switch_filter, uint8_t *stats)
 {
 	struct protocol *proto_start = NULL;
 	struct protocol *proto_end = NULL;
@@ -103,7 +105,7 @@ void dissector_entry_point(uint8_t *packet, struct frame_map *hdr, int linktype,
 		panic("Linktype not supported!\n");
 	};
 
-	dissector_main(pkt, proto_start, proto_end, buffer_pkt, switch_buf,
+	dissector_main(pkt, proto_start, proto_end, buffer_pkt, switch_filter,
 								    stats);
 
 

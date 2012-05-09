@@ -244,7 +244,7 @@ static inline uint64_t ntohll(uint64_t x)
 #ifndef alloc_string
 # define alloc_string(buffer_pkt,switch_buf, ...)			\
 {									\
-	if(*switch_buf){						\
+	if(*switch_buf == 1){						\
 		int len_new_;						\
 		int len_old_ = 0;					\
 		len_new_ = snprintf(NULL, 0, __VA_ARGS__);		\
@@ -256,7 +256,7 @@ static inline uint64_t ntohll(uint64_t x)
 		snprintf(buffer_pkt + len_old_, len_new_ + 1,		\
 					    __VA_ARGS__);		\
 	}								\
-	else								\
+	if(!*switch_buf)						\
 		tprintf(__VA_ARGS__);					\
 }
 #endif

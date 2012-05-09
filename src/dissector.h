@@ -52,7 +52,7 @@ static char *packet_types[]={
 
 static inline void show_frame_hdr(struct frame_map *hdr, int mode,
 				  enum ring_mode rmode, char **buffer_pkt,
-				  uint8_t *switch_buf)
+				  uint8_t *switch_filter)
 {
 	if (mode == FNTTYPE_PRINT_NONE)
 		return;
@@ -78,7 +78,7 @@ static inline void show_frame_hdr(struct frame_map *hdr, int mode,
 				hdr->s_ll.sll_ifindex, hdr->tp_h.tp_len,
 				hdr->tp_h.tp_sec, hdr->tp_h.tp_usec);
 		} else {
-			alloc_string(*buffer_pkt,switch_buf,"%u %u.%06u\n",
+			alloc_string(*buffer_pkt,switch_filter,"%u %u.%06u\n",
 				    hdr->tp_h.tp_len, hdr->tp_h.tp_sec,
 				    hdr->tp_h.tp_usec);
 		}

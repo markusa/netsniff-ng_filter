@@ -610,7 +610,7 @@ static void enter_mode_read_pcap(struct mode *mode)
 	struct tx_stats stats;
 	struct frame_map fm;
 	uint8_t *out;
-	uint8_t switch_buf = 0;
+	uint8_t switch_filter = 0;
 	uint8_t cnt_stat;
 	size_t out_len;
 	unsigned long trunced = 0;
@@ -626,8 +626,13 @@ static void enter_mode_read_pcap(struct mode *mode)
 		if (ret)
 			panic("error prepare reading pcap!\n");
 	}
-	if (mode->hlv)
-		switch_buf = 1;
+	if (mode->hlv) {
+		switch_filter = 1;
+		if (mode->print_mode == FNTTYPE_PRINT_NONE) {
+		      switch_filter = 2;
+		      mode->print_mode = FNTTYPE_PRINT_NORM;
+		}
+	}
 
 	fmemset(&fm, 0, sizeof(fm));
 	fmemset(&bpf_ops, 0, sizeof(bpf_ops));
@@ -676,10 +681,10 @@ static void enter_mode_read_pcap(struct mode *mode)
 		stats.tx_packets++;
 
 		show_frame_hdr(&fm, mode->print_mode, RING_MODE_EGRESS,
-				      &buffer_pkt, &switch_buf);
+				      &buffer_pkt, &switch_filter);
 		dissector_entry_point(out, &fm,
 				      mode->link_type, mode->print_mode,
-				      &buffer_pkt, &switch_buf, &cnt_stat);
+				      &buffer_pkt, &switch_filter, &cnt_stat);
 
 		if(!cnt_stat){
 			stats.tx_bytes -= fm.tp_h.tp_len;
@@ -1222,6 +1227,7 @@ int main(int argc, char **argv)
 			case 'k':
 			case 'B':
 			case 'e':
+			case 'L':
 				panic("Option -%c requires an argument!\n",
 				      optopt);
 			default:

@@ -77,49 +77,53 @@ static inline void ipv4(struct pkt_buff *pkt)
 	inet_ntop(AF_INET, &ip->h_saddr, src_ip, sizeof(src_ip));
 	inet_ntop(AF_INET, &ip->h_daddr, dst_ip, sizeof(dst_ip));
 
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf," [ IPv4 ");
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Addr (%s => %s), ",
-		src_ip, dst_ip);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Proto (%u), ",
-		ip->h_protocol);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"TTL (%u), ", ip->h_ttl);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"TOS (%u), ", ip->h_tos);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Ver (%u), ",
-		ip->h_version);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"IHL (%u), ", ip->h_ihl);
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Tlen (%u), ",
-		ntohs(ip->h_tot_len));
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"ID (%u), ",
-		ntohs(ip->h_id));
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"Res (%u), NoFrag (%u),\
-		MoreFrag (%u), FragOff (%u), ",
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," [ IPv4 ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Addr (%s => %s), ",
+						      src_ip, dst_ip);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Proto (%u), ",
+						      ip->h_protocol);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"TTL (%u), ",
+						      ip->h_ttl);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"TOS (%u), ",
+						      ip->h_tos);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Ver (%u), ",
+						      ip->h_version);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"IHL (%u), ",
+						      ip->h_ihl);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Tlen (%u), ",
+						      ntohs(ip->h_tot_len));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"ID (%u), ",
+						      ntohs(ip->h_id));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "Res (%u), NoFrag (%u), MoreFrag (%u), FragOff (%u), ",
 		FRAG_OFF_RESERVED_FLAG(frag_off) ? 1 : 0,
 		FRAG_OFF_NO_FRAGMENT_FLAG(frag_off) ? 1 : 0,
 		FRAG_OFF_MORE_FRAGMENT_FLAG(frag_off) ? 1 : 0,
 		FRAG_OFF_FRAGMENT_OFFSET(frag_off));
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"CSum (0x%.4x) is %s",
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"CSum (0x%.4x) is %s",
 		ntohs(ip->h_check),
 		csum ? colorize_start_full(black, red) "bogus (!)"
 		       colorize_end() : "ok");
 	if (csum)
-		alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"%s should be \
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"%s should be \
 			0x%.4x%s",colorize_start_full(black, red),
 			csum_expected(ip->h_check, csum), colorize_end());
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf," ]\n");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," ]\n");
 
 	opts_len = max((uint8_t) ip->h_ihl, sizeof(*ip) / sizeof(uint32_t)) *
 		   sizeof(uint32_t) - sizeof(*ip);
 
 	for (opt = pkt_pull(pkt, opts_len); opt && opts_len > 0; opt++) {
-		alloc_string(*pkt->buffer_pkt,pkt->switch_buf,"   [ Option \
-			Copied (%u), Class (%u), Number (%u)",
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"   \
+		[ Option Copied (%u), Class (%u), Number (%u)",
 			IP_OPT_COPIED_FLAG(*opt) ? 1 : 0, IP_OPT_CLASS(*opt),
 			IP_OPT_NUMBER(*opt));
 
 		switch (*opt) {
 		case IP_OPT_EOOL:
 		case IP_OPT_NOP:
-			alloc_string(*pkt->buffer_pkt,pkt->switch_buf," ]\n");
+			alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+				     "]\n");
 			opts_len--;
 			break;
 		default:
@@ -134,26 +138,30 @@ packets,
 			 */
 			opt_len = *(++opt);
 			if (opt_len > opts_len) {
-				alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+
+alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
 					    ", Len (%u, invalid) ]\n",opt_len);
 				goto out;
 			} else
-				alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+
+alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
 					    ",Len (%u) ]\n",opt_len);
 			opts_len -= opt_len;
-			alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+			alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
 					    "     [Data hex ");
 			for (opt_len -= 2; opt_len > 0; opt_len--)
-				alloc_string(*pkt->buffer_pkt,pkt->switch_buf,
+
+alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
 					    "%.2x",*(++opt));
-			alloc_string(*pkt->buffer_pkt,pkt->switch_buf," ]\n");
+			alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+				     "]\n");
 			break;
 		}
 	}
 out:
 	/* cut off everything that is not part of IPv4 payload */
 	pkt_trim(pkt, pkt_len(pkt) - min(pkt_len(pkt), (ntohs(ip->h_tot_len) -
-ip->h_ihl * sizeof(uint32_t))));
+			ip->h_ihl * sizeof(uint32_t))));
 	pkt_set_proto(pkt, &eth_lay3, ip->h_protocol);
 }
 
@@ -169,8 +177,8 @@ static inline void ipv4_less(struct pkt_buff *pkt)
 	inet_ntop(AF_INET, &ip->h_saddr, src_ip, sizeof(src_ip));
 	inet_ntop(AF_INET, &ip->h_daddr, dst_ip, sizeof(dst_ip));
 
-	alloc_string(*pkt->buffer_pkt,pkt->switch_buf," %s/%s Len %u", src_ip,
-				dst_ip,ntohs(ip->h_tot_len));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," %s/%s Len %u",
+			src_ip, dst_ip,ntohs(ip->h_tot_len));
 
 	/* cut off IP options and everything that is not part of IPv4 payload */
 	pkt_pull(pkt, max((uint8_t) ip->h_ihl, sizeof(*ip) / sizeof(uint32_t))
