@@ -234,7 +234,7 @@ struct mode {
 	char *device_in;
 	char *device_out;
 	char *filter;
-	char *hlv;
+	char *hlf;
 	int cpu;
 	int dump;
 	int link_type;
@@ -626,7 +626,7 @@ static void enter_mode_read_pcap(struct mode *mode)
 		if (ret)
 			panic("error prepare reading pcap!\n");
 	}
-	if (mode->hlv) {
+	if (mode->hlf) {
 		switch_filter = 1;
 		if (mode->print_mode == FNTTYPE_PRINT_NONE) {
 		      switch_filter = 2;
@@ -1122,7 +1122,7 @@ int main(int argc, char **argv)
 			mode.filter = xstrdup(optarg);
 			break;
 		case 'L':
-			mode.hlv = xstrdup(optarg);
+			mode.hlf = xstrdup(optarg);
 			/* parse argument */
 			break;
 		case 'M':
