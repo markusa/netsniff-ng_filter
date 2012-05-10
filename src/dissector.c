@@ -66,8 +66,7 @@ static void dissector_main(struct pkt_buff *pkt, struct protocol *start,
 	}
 
 	if(*switch_filter){
-	    if((*pkt->filter).tcp.dest_port==995 ||
-		(*pkt->filter).tcp.src_port==995){
+	    if(1){
 		    if(*buffer_pkt) {
 			  printf("%s",*buffer_pkt);
 			  xfree(*buffer_pkt);

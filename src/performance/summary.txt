@@ -1,0 +1,129 @@
+(1) Used fuzz-2012-04-27-376.pcap from ftp://wireshark.org/automated/captures/
+
+It includes a lot of pop3 traffic, so I have filtered for Port 995.
+
+Packets: 84655
+Bytes:   82694200
+
+(2) Used PCAP from private partly with vlan
+
+It includes a lot of VNC traffic, so I have filtered for Port 5900.
+
+Packets: 616905
+Bytes:   278039946 
+
+
+---------------------------------------------------
+netsniff:
+
+Command:
+(1) netsniff-ng -i path/to/examples/pcap/fuzz-2012-04-27-376.pcap -L foo -s
+(1) netsniff-ng -i path/to/private_pcap -L foo -s
+
+
+netsniff filter hardcoded in dissector.c:
+(1) "(*pkt->filter).tcp.dest_port==995 || (*pkt->filter).tcp.src_port==995"
+(2) "(*pkt->filter).tcp.dest_port==5900 || (*pkt->filter).tcp.src_port==5900"
+
+Protos enabled: ethernet, vlan, ipv4, tcp, udp
+
+
+           time 1 (s)   time 2 (s)
+----------------------------------
+netsniff | 0.325        10.132
+---------------------------------------------------
+
+
+---------------------------------------------------
+tshark (1.6.5):
+
+Command:
+(1) tshark -r path/to/examples/pcap/fuzz-2012-04-27-376.pcap -z io,stat,0,tcp.port==995 -q
+(2) tshark -r path/to/private_pcap -z io,stat,0,tcp.port==5900 -q
+
+
+(1) tshark find not all packets because it can not handle fragmented ones. 
+    72808 frames (netsniff) <-> 69781 frames (tshark)
+
+           time 1 (s)   time 2 (s)
+----------------------------------
+tshark   | 2.588        101.073
+---------------------------------------------------
+
+
+---------------------------------------------------
+tcpdump (4.0.0):
+
+Command:
+(1) tcpdump -r path/to/examples/pcap/fuzz-2012-04-27-376.pcap -q 'tcp port 995' -n>fuzz.log
+(1) tcpdump -r path/to/private_pcap -q 'tcp port 5900' -n>fuzz.log
+
+
+(1) tcpdump find not all packets because of corrupted ipv4 header length
+    72808 frames (netsniff) <-> 69864 frames (tcpdump)
+(2) tcpdump find not all packets because it can not handle vlan
+    306387 frames (netsniff) <-> 226617 frames (tcpdump)
+Difference of recognized packets to tshark because of handling of corrupted packets.
+
+Attention! I think tcpdump translate the filter code to bpf, so don't compare it with the dissector-filter. Also tcpdump supports no silent mode and can not recognize if vlan is included or inserted proto is used...
+
+           time 1 (s)   time 2 (s)
+----------------------------------
+tcpdump  | 0.336        7.236
+---------------------------------------------------
+
+
+---------------------------------------------------
+netsniff:
+
+Command:
+(1) netsniff-ng -i path/to/examples/pcap/fuzz-2012-04-27-376.pcap -f pop3.bpf -s
+(2) netsniff-ng -i path/to/private_pcap -f port5900.bpf -s
+
+
+pop3.bpf:
+  { 0x28, 0, 0, 0xc	    }, / Load Ethernet at 12
+  { 0x15, 0, 6, 0x00000800  }, / Check for IPv4
+  { 0xb1, 0, 0, 0x0000000e  }, / Load IPv4 Hdr Len
+  { 0x48, 0, 0, 0x0000000c  }, / Load Src Port
+  { 0x15, 2, 0, 0x000003e3  }, / Check for 995
+  { 0x48, 0, 0, 0x0000000e  }, / Load Dst Port
+  { 0x15, 0, 1, 0x000003e3  }, / Check for 995
+  { 0x06, 0, 0, 0xffffffff  },
+  { 0x06, 0, 0, 0x00000000  },
+
+port5900.bpf: generated with "tcpdump -dd tcp port 5900"
+
+
+(1) netsniff with pop3.bpf can not recognize if vlan is included or ipv6 is used, also corrupted ipv4 header lengths are a problem.
+    netsniff find only 47293 frames, I think it's a problem of corrupted IPv4 header length etc
+(2) found same count of frames as tcpdump
+
+
+           time 1 (s)   time 2 (s)
+----------------------------------
+netsniff | 0.206        8.815
+---------------------------------------------------
+
+
+
+For final I have a statistic for netsniff print mode with my private PCAP:
+
+(1) netsniff-ng -i path/to/pcap -L foo -> buffered mode -> filter: "(*pkt->filter).tcp.dest_port==5900 || (*pkt->filter).tcp.src_port==5900"
+(2) netsniff-ng -i path/to/pcap -L foo -> buffered mode -> filter: "1"
+(3) netsniff-ng -i path/to/pcap        -> tprintf mode
+(4) netsniff-ng -i path/to/pcap        -> no alloc_string implemented
+
+(1) 306387 frames printed
+(2) 616905 frames printed
+(3) 616905 frames printed
+(4) 616905 frames printed
+
+
+           time 1       time 2       time 3       time 4
+----------------------------------------------------------------
+netsniff | 15m39s       87m18s       60m31s       60m41s
+
+
+
+
