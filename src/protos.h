@@ -25,8 +25,8 @@
 // #include "proto_ipv6_no_nxt_hdr.h"
 // #include "proto_ipv6_routing.h"
 // #include "proto_none.h"
-// #include "proto_tcp.h"
-// #include "proto_udp.h"
+#include "proto_tcp.h"
+#include "proto_udp.h"
 #include "proto_vlan.h"
 
 #endif /* PROTOS_H */

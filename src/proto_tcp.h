@@ -85,39 +85,50 @@ static inline void tcp(struct pkt_buff *pkt)
 
 	if (tcp == NULL)
 		return;
+	(*pkt->filter).tcp.tcp = 1;
+	(*pkt->filter).tcp.dest_port = ntohs(tcp->dest);
+	(*pkt->filter).tcp.src_port = ntohs(tcp->source);
 
-	tprintf(" [ TCP ");
-	tprintf("Port (%u => %u, %s%s%s), ",
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," [ TCP ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "Port (%u => %u, %s%s%s), ",
 		ntohs(tcp->source), ntohs(tcp->dest),
 		colorize_start(bold),
 		lookup_port_tcp(tcp_port(tcp->source, tcp->dest)),
 		colorize_end());
-	tprintf("SN (0x%x), ", ntohl(tcp->seq));
-	tprintf("AN (0x%x), ", ntohl(tcp->ack_seq));
-	tprintf("DataOff (%u), ", tcp->doff);
-	tprintf("Res (%u), ", tcp->res1);
-	tprintf("Flags (");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "SN (0x%x), ", ntohl(tcp->seq));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "AN (0x%x), ", ntohl(tcp->ack_seq));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "DataOff (%u), ", tcp->doff);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "Res (%u), ", tcp->res1);
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Flags (");
 	if (tcp->fin)
-		tprintf("FIN ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"FIN ");
 	if (tcp->syn)
-		tprintf("SYN ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"SYN ");
 	if (tcp->rst)
-		tprintf("RST ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"RST ");
 	if (tcp->psh)
-		tprintf("PSH ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"PSH ");
 	if (tcp->ack)
-		tprintf("ACK ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"ACK ");
 	if (tcp->urg)
-		tprintf("URG ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"URG ");
 	if (tcp->ece)
-		tprintf("ECE ");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"ECE ");
 	if (tcp->cwr)
-		tprintf("CWR ");
-	tprintf("), ");
-	tprintf("Window (%u), ", ntohs(tcp->window));
-	tprintf("CSum (0x%.4x), ", ntohs(tcp->check));
-	tprintf("UrgPtr (%u)", ntohs(tcp->urg_ptr));
-	tprintf(" ]\n");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"CWR ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"), ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "Window (%u), ", ntohs(tcp->window));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "CSum (0x%.4x), ", ntohs(tcp->check));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "UrgPtr (%u)", ntohs(tcp->urg_ptr));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," ]\n");
 
 	pkt_set_proto(pkt, &eth_lay4, tcp_port(tcp->source, tcp->dest));
 }
@@ -129,28 +140,30 @@ static inline void tcp_less(struct pkt_buff *pkt)
 	if (tcp == NULL)
 		return;
 
-	tprintf(" TCP %s%s%s %u/%u F%s",
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     " TCP %s%s%s %u/%u F%s",
 		colorize_start(bold),
 		lookup_port_tcp(tcp_port(tcp->source, tcp->dest)),
 		colorize_end(), ntohs(tcp->source), ntohs(tcp->dest),
 		colorize_start(bold));
 	if (tcp->fin)
-		tprintf(" FIN");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," FIN");
 	if (tcp->syn)
-		tprintf(" SYN");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," SYN");
 	if (tcp->rst)
-		tprintf(" RST");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," RST");
 	if (tcp->psh)
-		tprintf(" PSH");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," PSH");
 	if (tcp->ack)
-		tprintf(" ACK");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," ACK");
 	if (tcp->urg)
-		tprintf(" URG");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," URG");
 	if (tcp->ece)
-		tprintf(" ECE");
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," ECE");
 	if (tcp->cwr)
-		tprintf(" CWR");
-	tprintf("%s Win %u S/A 0x%x/0x%x", colorize_end(),
+		alloc_string(*pkt->buffer_pkt,pkt->switch_filter," CWR");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "%s Win %u S/A 0x%x/0x%x", colorize_end(),
 		ntohs(tcp->window), ntohl(tcp->seq), ntohl(tcp->ack_seq));
 
 	pkt_set_proto(pkt, &eth_lay4, tcp_port(tcp->source, tcp->dest));

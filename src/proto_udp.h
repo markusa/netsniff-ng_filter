@@ -58,15 +58,18 @@ static inline void udp(struct pkt_buff *pkt)
 	if (udp == NULL)
 		return;
 
-	tprintf(" [ UDP ");
-	tprintf("Port (%u => %u, %s%s%s), ",
-		ntohs(udp->source), ntohs(udp->dest),
-		colorize_start(bold),
-		lookup_port_udp(udp_port(udp->source, udp->dest)),
-		colorize_end());
-	tprintf("Len (%u), ", ntohs(udp->len));
-	tprintf("CSum (0x%.4x)", ntohs(udp->check));
-	tprintf(" ]\n");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," [ UDP ");
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,
+		     "Port (%u => %u, %s%s%s), ",
+		     ntohs(udp->source), ntohs(udp->dest),
+		     colorize_start(bold),
+		     lookup_port_udp(udp_port(udp->source, udp->dest)),
+		     colorize_end());
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"Len (%u), ",
+		     ntohs(udp->len));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter,"CSum (0x%.4x)",
+		     ntohs(udp->check));
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," ]\n");
 
 	pkt_set_proto(pkt, &eth_lay4, udp_port(udp->source, udp->dest));
 }
@@ -78,7 +81,7 @@ static inline void udp_less(struct pkt_buff *pkt)
 	if (udp == NULL)
 		return;
 
-	tprintf(" UDP %s%s%s %u/%u",
+	alloc_string(*pkt->buffer_pkt,pkt->switch_filter," UDP %s%s%s %u/%u",
 		colorize_start(bold),
 		lookup_port_udp(udp_port(udp->source, udp->dest)),
 		colorize_end(), ntohs(udp->source), ntohs(udp->dest));
