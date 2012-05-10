@@ -18,7 +18,7 @@ netsniff:
 
 Command:
 (1) netsniff-ng -i path/to/examples/pcap/fuzz-2012-04-27-376.pcap -L foo -s
-(1) netsniff-ng -i path/to/private_pcap -L foo -s
+(2) netsniff-ng -i path/to/private_pcap -L foo -s
 
 
 netsniff filter hardcoded in dissector.c:
@@ -56,7 +56,7 @@ tcpdump (4.0.0):
 
 Command:
 (1) tcpdump -r path/to/examples/pcap/fuzz-2012-04-27-376.pcap -q 'tcp port 995' -n>fuzz.log
-(1) tcpdump -r path/to/private_pcap -q 'tcp port 5900' -n>fuzz.log
+(2) tcpdump -r path/to/private_pcap -q 'tcp port 5900' -n>fuzz.log
 
 
 (1) tcpdump find not all packets because of corrupted ipv4 header length
