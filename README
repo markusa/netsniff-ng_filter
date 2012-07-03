@@ -16,3 +16,5 @@ Only dissectors for ethernet, vlan, ipv4, tcp, and udp are enabled, so other pro
 
 Filter string is changeable at src/dissector.c line 69.
 A list of filter-arguments can be found in src/proto_filter.h
+
+A performance test and comparison is below src/performance/summary.txt
