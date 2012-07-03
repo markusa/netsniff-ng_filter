@@ -1,63 +1,17 @@
-//////////////////////////////////////////////////////////////////////////////
+It's a fork from git://github.com/gnumaniacs/netsniff-ng.git in the development stage to version 0.5.7.
 
-                    netsniff-ng - the packet sniffing beast
+It's only a prototype, so some functions could be deprecated or faulty.
 
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Install as described in INSTALL file and test it with ftp://wireshark.org/automated/captures/fuzz-2012-04-27-376.pcap.
 
-                                      .      .
-                                     /(      )\
-                                   .' {______} '.
-                                    \ ^,    ,^ /
- netsniff-ng is a free, performant   |'O\  /O'|   _.<0101011>--
- Linux network analyzer and          > `'  '` <  /
- networking toolkit.                 ) ,.==., (  |
-                                    (|/--~~--\|)-'
- Release: 2012-xx-xx               /
-                                  (      ___
- Web: http://netsniff-ng.org       \__.=|___E
+Call netsniff-ng with the following string:
 
-The gain of performance is reached by zero-copy mechanisms, so that on packet
-reception and transmission the kernel does not need to copy packets from kernel
-space to user space and vice versa.
+netsniff-ng -i path/to/examples/pcap/fuzz-2012-04-27-376.pcap -L foo -s
 
-For this purpose, the netsniff-ng toolkit [1] is libpcap independent, but
-nevertheless supports the pcap file format for capturing, replaying and
-performing offline-analysis of pcap dumps. Furthermore, we are focussing on
-building a robust and clean analyzer and utilities that complete netsniff-ng as
-a support for network development, debugging or network reconnaissance. (Note:
-libpcap starting from 1.0.0 now also supports zero-copy, but for capturing only)
+Only change the path to the PCAP file. Option -L enables the high level filtering an needs a string argument which has no effect.
+It's for a later implementation of dynamic filter strings. -s is optional and enable silent mode.
 
-The netsniff-ng toolkit currently consists of the following utilities:
+Only dissectors for ethernet, vlan, ipv4, tcp, and udp are enabled, so other protocols are not recognized.
 
-  * netsniff-ng: a zero-copy analyzer, pcap capturing and replaying tool
-  * trafgen: a high performance zero-copy network packet generator
-  * ifpps: a top-like kernel networking and system statistics tool
-  * curvetun: a lightweight curve25519-based multiuser IP tunnel
-  * ashunt: an autonomous system trace route and ISP testing utility
-  * flowtop: a top-like netfilter connection tracking tool
-  * bpfc: a tiny Berkeley Packet Filter compiler supporting Linux extensions
-
-Have a look at the Documentation/ folder for further information.
-
-The netsniff-ng toolkit is an Open Source project covered by the GNU General 
-Public License. For any questions or feedback about netsniff-ng you are welcome
-to leave us a message to <workgroup@netsniff-ng.org> or to our mailing list
-at <netsniff-ng@googlegroups.com> (Note: you have to register first). This
-project is purely non-commercial and will always stay that way! The current
-project status can be considered as "working". In general, all tools have been
-tested by us to a great extend including their command-line options. In fact,
-many of our tools are used in production systems. However, we give no guarantee
-that our tools are free of bugs! If you spot some issues, contact us as
-described in REPORTING-BUGS.
-
-Also, have a look at our FAQ [2] for answering your questions. Furthermore,
-we have a development blog [3] where we sometimes drop some interesting things
-or news for the outside world! A public repository of the old stable releases
-can be found here [4].
-
-Happy packet hacking!
-
-[1] http://netsniff-ng.org/
-[2] http://netsniff-ng.org/faq.html
-[3] http://dev.netsniff-ng.org/
-[4] http://pub.netsniff-ng.org/
+Filter string is changeable in src/dissector.c line 69.
+A list of filter-arguments can be found in src/proto_filter.h
